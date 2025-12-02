@@ -2,10 +2,15 @@ import React, { useState } from "react";
 
 function ContactList({contact}){
     const[filterText,setFilterText]=useState("");
-    const filterData=contact.filter((item)=>{
-        return Object.keys(item).some((key)=>item[key]
-        .toString().toLowercase().includes(filterText.toLowerCase()))
-    })
+    const filterData = contact.filter((item) => {
+  return Object.keys(item).some((key) =>
+    item[key]
+      .toString()
+      .toLowerCase()
+      .includes(filterText.toLowerCase())
+  );
+});
+
     return(
         <div>
             <h2>Contact List</h2>
@@ -30,4 +35,4 @@ function ContactList({contact}){
     )
 }
 
-export default ContactList
+export default ContactList;
