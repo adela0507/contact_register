@@ -1,4 +1,5 @@
 import React from "react";
+import "../../App.css"
 
 function ContactForm({ contact, addContacts }) {
   const initialValue = { full_name: "", phone_number: "" };
